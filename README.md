@@ -1,22 +1,7 @@
 # PID Project Engineering 3 
 # The Wheel of Doom 
-Project Timeline
-**Week of 4/17-21**
-CAD Design
-**Week of 4/24-28**
-Cad Design (Monday)
-Cutting, Printing and Assembling (Block Day)
-Thursday-Friday (Wiring) 
-**Week of 5/1-5**
-PID Coding
-**Week of 5/8-12**
-Pid Coding plus Tuning
-**Week of 5/15-19**
-Tuning
-**Week of 5/22-26**
-Testing 
-**Week of 5/29-6/2**
-Extra time 
+
+Attached below is a table of our week-to-week goals, and what we would like to get done in that time.
 
 | **Week / Day**       | **To-Do**            |
 | -------------------- | -------------------- |
