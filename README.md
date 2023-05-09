@@ -15,4 +15,5 @@ Attached below is a table of our week-to-week goals, and what we would like to g
 | **Week of 5/15-19**  | PID Tuning           |
 | **Week of 5/22-26**  | PID Tuning/Testing   |
 | **Week of 5/29-6/2** | Extra Time           |
-sophie was here
+
+``python
