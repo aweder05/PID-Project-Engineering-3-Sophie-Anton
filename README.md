@@ -30,7 +30,7 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 
 ## CAD Images
 
-![PIDmotorviewwithswitch](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/63fc40c7-1fdc-4013-946f-fb41ca2daa3c | width = 100)
+![PIDmotorviewwithswitch](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/63fc40c7-1fdc-4013-946f-fb41ca2daa3c)
 ![insideviewPID](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/0dfa37ee-ca52-4004-9bfc-da7c6b830cb5)
 ![isometricPID](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/c7c0869f-74ba-422c-8d60-07509ed2f411)
 ![banana](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/830d2f33-b15f-41eb-a28a-b038ec8a305c)
