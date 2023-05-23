@@ -7,7 +7,7 @@
 + Proposed Project Schedule
 + CAD Design for PID Project 
 [Project Idea](#Project_Idea)
-section_title<a name="Project_Idea"></a>
+<a name="Project_Idea"></a>
 
 ### Project Idea
 
