@@ -5,7 +5,6 @@
 
 + Project Idea
 + Proposed Project Schedule
-+ CAD Design for PID Project
 + [CAD Design for PID Project](#CAD_Design_for_PID_Project)
 <a name="CAD_Design_for_PID_Project"></a> 
 + [Project Idea](#Project_Idea)
