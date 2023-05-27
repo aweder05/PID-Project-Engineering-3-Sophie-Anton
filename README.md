@@ -41,9 +41,13 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 
 [image goes here]
 
+###### My partner and I leared that learned that ambitious ideas with poor planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen.
+
 ## Planning for Code
 
 [image goes here]
+
+###### I had trouble understanding PID initially, which is why I had to organize my thoughts as shown above. I made a checklist of what to do in order to get the project working.
 
 ## CAD Images
 
