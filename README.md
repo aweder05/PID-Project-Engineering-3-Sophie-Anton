@@ -41,23 +41,22 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 
 [image goes here]
 
-###### My partner and I leared that learned that ambitious ideas with poor planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen.
+From the Robotic Arm Project, we learned that learned that ambitious ideas with poor planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen.
 
 ## Planning for Code
 
 [image goes here]
 
-###### I had trouble understanding PID initially, which is why I had to organize my thoughts as shown above. I made a checklist of what to do in order to get the project working.
+I had trouble understanding PID initially, which is why I had to organize my thoughts as shown above. I made a checklist of what to do in order to get the project working.
 
 ## CAD Images
 
-![PIDmotorviewwithswitch](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/63fc40c7-1fdc-4013-946f-fb41ca2daa3c)
+| | | 
+|-|- | 
+|<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/63fc40c7-1fdc-4013-946f-fb41ca2daa3c" width="300"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/0dfa37ee-ca52-4004-9bfc-da7c6b830cb5" width="300"> | 
+|[caption goes here] | [caption goes here] | 
+|<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/c7c0869f-74ba-422c-8d60-07509ed2f411" width="300"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/830d2f33-b15f-41eb-a28a-b038ec8a305c" width="300"> |
+|[caption goes here] | [caption goes here]| 
 
+----
 
-----
-![insideviewPID](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/0dfa37ee-ca52-4004-9bfc-da7c6b830cb5)
-----
-![isometricPID](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/c7c0869f-74ba-422c-8d60-07509ed2f411)
-----
-![banana](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/830d2f33-b15f-41eb-a28a-b038ec8a305c)
-----
