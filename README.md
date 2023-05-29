@@ -3,11 +3,13 @@
 
 ## Table of Contents 
 
-* [Project_Idea](#Project_Idea)
-* [Proposed_Project_Schedule](#Proposed_Project_Schedule)
-* [CAD_Design_for_PID_Project](#CAD_Design_for_PID_Project)
+* [Project Idea](#Project_Idea)
+* [Proposed Project Schedule](#Proposed_Project_Schedule)
+* [CAD Design for PID Project](#CAD_Design_for_PID_Project)
+* [Planning for CAD](#Planning_for_CAD)
+* [Planning for Code](#Planning_for_Code)
+* [CAD Images](#CAD_Images)
 <!-- <a name="CAD_Design_for_PID_Project"></a>  -->
-+ [Project Idea](#Project_Idea)
 <!-- <a name="Project_Idea"></a> -->
 
 ### Project_Idea
