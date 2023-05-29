@@ -139,7 +139,7 @@ while True:
 ```
 ##### This is the beginning of the PID code. So far we have the rpm being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
 
-##### I needed help with the code for the RPM
+##### I needed help with the code for the RPM:
 ```python
 if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the remainder of zero, run this code:
         time1= time.monotonic()
@@ -149,11 +149,22 @@ if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the rema
 ```
 ##### Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
 ## Wiring
-[wiring diagram goes here]
-##### This is the wiring that we're most likely going to be using for the final diagram.
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Wiring%20Diagram%20PID.png?raw=true" width="600"> 
+
+##### This is the final wiring.
+
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Photointerrupter_PID.png?raw=true"
+width="200">
+
+##### Because we had to use a mini breadboard in the place of the photointerrupter, this is a zoomed in screenshot of the individual pins. Your can follow colored wires to their pins in the larger image.
+
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/SDA_SCL_PID.png?raw=true"
+width="200">
+
+##### Similar to the image beside it, this is an inflated image used to exemplify the SCL and SDA pins that don't appear on Arduino's, but do on Metro's, which is what we used. SCL and SDA pins are important for the LCD display. Again, you can follow the wire colors to the LCD.
 
 ## Evidence
-[video of working LCD displaying RPM]
+[GIF of working LCD displaying RPM]
 ##### This is evidence of the LCD displaying RPM, and the photointerrupter working.
 
 ----
