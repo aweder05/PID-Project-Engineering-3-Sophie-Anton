@@ -54,9 +54,9 @@ I had trouble understanding PID initially, which is why I had to organize my tho
 | | | 
 |-|- | 
 |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/63fc40c7-1fdc-4013-946f-fb41ca2daa3c" width="300"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/0dfa37ee-ca52-4004-9bfc-da7c6b830cb5" width="300"> | 
-|[caption goes here] | [caption goes here] | 
+|This is a 3/4 view of our project CAD. My partner and I were sure to take an image that shows the inside of the box. This angle displays where the LCD, motor, battery pack, LED, and switch are positioned. | This image encapsulates what the inside of the box looks like, minus the jumper wires. | 
 |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/c7c0869f-74ba-422c-8d60-07509ed2f411" width="300"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/830d2f33-b15f-41eb-a28a-b038ec8a305c" width="300"> |
-|[caption goes here] | [caption goes here]| 
+|This image shows the outside of the box. This angle exemplifies what the box would look like fabricated. The LED and switch are placed around the LCD, with the battery pack on top of the box, and the photointerrupter and motor piece on the side. | This is the piece that attaches to the motor.|
 
 ----
 
