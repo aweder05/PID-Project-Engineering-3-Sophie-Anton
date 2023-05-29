@@ -40,19 +40,19 @@ The most likely outcome is that we will probably need more time for some things,
 
 We knew that we needed to choose a simple project to make it so that we wouldn't have to cram in everything all at once near the end of our project. That was reflected in the way we approached our CAD design, as we opted for a simple T-Slot box with all the electronic elements on the inside. The only slightly-challenging element of our CAD Design process was making sure that there was enough space for everything, especially since we knew that we would need plenty of space for all of the wiring for the LCD, LED, Adafruit Metro, Switch, TT-Motor, and finally the Photointerruptor. In the end, reflecting on what we could have probably done better, it might have been smart to make the box a little bigger in order to allow for better ease if access while wiring.
 
-## Planning for CAD
+## Planning_for_CAD
 
 [image goes here]
 
 From the Robotic Arm Project, we learned that learned that ambitious ideas with poor planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen.
 
-## Planning for Code
+## Planning_for_Code
 
 [image goes here]
 
 I had trouble understanding PID initially, which is why I had to organize my thoughts as shown above. I made a checklist of what to do in order to get the project working.
 
-## CAD Images
+## CAD_Images
 
 | | | 
 |-|- | 
