@@ -40,17 +40,22 @@ The most likely outcome is that we will probably need more time for some things,
 
 We knew that we needed to choose a simple project to make it so that we wouldn't have to cram in everything all at once near the end of our project. That was reflected in the way we approached our CAD design, as we opted for a simple T-Slot box with all the electronic elements on the inside. The only slightly-challenging element of our CAD Design process was making sure that there was enough space for everything, especially since we knew that we would need plenty of space for all of the wiring for the LCD, LED, Adafruit Metro, Switch, TT-Motor, and finally the Photointerruptor. In the end, reflecting on what we could have probably done better, it might have been smart to make the box a little bigger in order to allow for better ease if access while wiring.
 
+## Materials
+- 
+
 ## Planning_for_CAD
 
-[image goes here]
+[image of planning (CAD)]
 
 ##### From the Robotic Arm Project, we learned that learned that ambitious ideas with poor planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen.
 
 ## Planning_for_Code
 
-[image goes here]
+[image of planning (code)]
 
 ##### I had trouble understanding PID initially, which is why I had to organize my thoughts as shown above. I made a checklist of what to do in order to get the project working.
+
+
 
 ## CAD_Images
 
@@ -62,7 +67,8 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 |This image shows the outside of the box. This angle exemplifies what the box would look like fabricated. The LED and switch are placed around the LCD, with the battery pack on top of the box, and the photointerrupter and motor piece on the side. | This is the piece that attaches to the motor.
 
 ## Code Prototype and Evidence
-```pythonimport board
+```python
+import board
 import time
 import pwmio
 import analogio as AIO
@@ -132,9 +138,23 @@ while True:
     #     lcd.print(str("ON"))
 ```
 ##### This is the beginning of the PID code. So far we have the rpm being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
+
+##### I needed help with the code for the RPM
+```python
+if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the remainder of zero, run this code:
+        time1= time.monotonic()
+    elif interrupts % 10 == 9:
+        time2 = time.monotonic()
+        RPM = 60/((time2-time1)/10)
+```
+##### Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
 ## Wiring
 [wiring diagram goes here]
 ##### This is the wiring that we're most likely going to be using for the final diagram.
+
+## Evidence
+[video of working LCD displaying RPM]
+##### This is evidence of the LCD displaying RPM, and the photointerrupter working.
 
 ----
 
