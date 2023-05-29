@@ -9,6 +9,9 @@
 * [Planning for CAD](#Planning_for_CAD)
 * [Planning for Code](#Planning_for_Code)
 * [CAD Images](#CAD_Images)
+* [Code Prototype and Evidence](#Code_Prototype_and_Evidence)
+* [Wiring](#Wiring)
+* [Evidence](#Evidence)
 <!-- <a name="CAD_Design_for_PID_Project"></a>  -->
 <!-- <a name="Project_Idea"></a> -->
 
@@ -66,7 +69,7 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/c7c0869f-74ba-422c-8d60-07509ed2f411" width="300"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/830d2f33-b15f-41eb-a28a-b038ec8a305c" width="300"> |
 |This image shows the outside of the box. This angle exemplifies what the box would look like fabricated. The LED and switch are placed around the LCD, with the battery pack on top of the box, and the photointerrupter and motor piece on the side. | This is the piece that attaches to the motor.
 
-## Code Prototype and Evidence
+## Code_Prototype_and_Evidence
 ```python
 import board
 import time
