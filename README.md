@@ -50,7 +50,7 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/CAD.PID.Planning.png?raw=true" width="300">
 
-From the Robotic Arm Project, we learned that learned that ambitious ideas with poor planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen.
+From the Robotic Arm Project, we learned that learned that ambitious ideas mixed with inefficient planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen.
 
 ## Planning_for_Code
 
