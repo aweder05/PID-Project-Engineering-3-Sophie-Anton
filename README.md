@@ -48,15 +48,15 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 
 ## Planning_for_CAD
 
-[image of planning (CAD)]
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/CAD.PID.Planning.png?raw=true" width="300">
 
-##### From the Robotic Arm Project, we learned that learned that ambitious ideas with poor planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen.
+From the Robotic Arm Project, we learned that learned that ambitious ideas with poor planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen.
 
 ## Planning_for_Code
 
-[image of planning (code)]
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/PLANNING.CODE.png?raw=true" width="300">
 
-##### I had trouble understanding PID initially, which is why I had to organize my thoughts as shown above. I made a checklist of what to do in order to get the project working.
+I had trouble understanding PID initially, which is why I had to organize my thoughts as shown above. I made a checklist of what to do in order to get the project working.
 
 
 
@@ -140,9 +140,9 @@ while True:
     #     lcd.set_cursor_pos(0, 1)
     #     lcd.print(str("ON"))
 ```
-##### This is the beginning of the PID code. So far we have the rpm being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
+This is the beginning of the PID code. So far we have the rpm being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
 
-##### I needed help with the code for the RPM:
+I needed help with the code for the RPM:
 ```python
 if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the remainder of zero, run this code:
         time1= time.monotonic()
@@ -150,7 +150,7 @@ if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the rema
         time2 = time.monotonic()
         RPM = 60/((time2-time1)/10)
 ```
-##### Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
+Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
 ## Wiring
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Wiring%20Diagram%20PID.png?raw=true" width="600"> 
 
@@ -159,12 +159,12 @@ if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the rema
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Photointerrupter_PID.png?raw=true"
 width="200">
 
-##### Because we had to use a mini breadboard in the place of the photointerrupter, this is a zoomed in screenshot of the individual pins. Your can follow colored wires to their pins in the larger image.
+Because we had to use a mini breadboard in the place of the photointerrupter, this is a zoomed in screenshot of the individual pins. Your can follow colored wires to their pins in the larger image.
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/SDA_SCL_PID.png?raw=true"
 width="200">
 
-##### Similar to the image beside it, this is an inflated image used to exemplify the SCL and SDA pins that don't appear on Arduino's, but do on Metro's, which is what we used. SCL and SDA pins are important for the LCD display. Again, you can follow the wire colors to the LCD.
+Similar to the image beside it, this is an inflated image used to exemplify the SCL and SDA pins that don't appear on Arduino's, but do on Metro's, which is what we used. SCL and SDA pins are important for the LCD display. Again, you can follow the wire colors to the LCD.
 
 ## Evidence
 [GIF of working LCD displaying RPM]
