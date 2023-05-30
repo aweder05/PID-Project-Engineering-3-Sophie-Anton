@@ -1,5 +1,5 @@
 # PID Project Engineering 3 
-# The Banana of Doom 
+# _**The Banana of Doom**_ 
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/banana%20border.png?raw=true" width = 700>
 
@@ -17,7 +17,7 @@
 <!-- <a name="CAD_Design_for_PID_Project"></a>  -->
 <!-- <a name="Project_Idea"></a> -->
 
-### Project_Idea
+## **Project_Idea**
 
 Since we were unable to completely finish our last project, we decided that we would choose a simple PID project. This was also because PID was a completely new concept to use, and because we knew that it would take up a lot of our time to find a basis of understanding for PID and how to apply that to our coding and all other aspects of our project. Therefore, we decided to do the following: create a box with a TT-Motor on the inside, which spins a mini-banana on the outside. This would then be read by a photointerruptor in terms of rotations per minute. Then this value would be displayed on the front of our box using a Liquid Crystal Display. The entire box would be powered by a 9-Volt battery back, with an on switch and a corresponding LED to signify if our box was switched on or not.
 
@@ -45,10 +45,8 @@ The most likely outcome is that we will probably need more time for some things,
 | :------------ | :------------- |
 | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/CAD.PID.Planning.png?raw=true" width="300">  |  <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/PLANNING.CODE.png?raw=true" width="300"> |
 | From the Robotic Arm Project, we learned that learned that ambitious ideas mixed with inefficient planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen. | I had trouble understanding PID initially, which is why I had to organize my thoughts as shown above. I made a checklist of what to do in order to get the project working. In the future I think it would be a good idea to make this a habit before starting code so that I can start with small tasks leading up to a larger one
-|
 
-
-
+----
 
 ## CAD_Design_for_PID_Project
 
@@ -69,7 +67,7 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 
 
 
-## CAD_Images
+## **CAD_Images**
 
 | | | 
 |-|- | 
@@ -78,7 +76,8 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/c7c0869f-74ba-422c-8d60-07509ed2f411" width="300"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/830d2f33-b15f-41eb-a28a-b038ec8a305c" width="300"> |
 |This image shows the outside of the box. This angle exemplifies what the box would look like fabricated. The LED and switch are placed around the LCD, with the battery pack on top of the box, and the photointerrupter and motor piece on the side. | This is the piece that attaches to the motor.
 
-## Code_Prototype_and_Evidence
+## **Code_Prototype_and_Evidence**
+
 ```python
 import board
 import time
@@ -149,7 +148,7 @@ while True:
     #     lcd.set_cursor_pos(0, 1)
     #     lcd.print(str("ON"))
 ```
-This is the beginning of the PID code. So far we have the rpm being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
+This is the beginning of the PID code. So far we have the Rotations per Minute being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
 
 I needed help with the code for the RPM:
 ```python
@@ -160,23 +159,33 @@ if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the rema
         RPM = 60/((time2-time1)/10)
 ```
 Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
-## Wiring
+
+## __Wiring__
+
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Wiring%20Diagram%20PID.png?raw=true" width="600"> 
 
-##### This is the final wiring.
+----
 
-<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Photointerrupter_PID.png?raw=true"
-width="200">
+##### This is the final wiring. The hardest thing about wiring this project was the space that we allowed ourselves to work with from the beginning. Since we wanted to avoid having a large and bulky box, we decided during our design process that we would try and fit everything inside a relatively small box. Eventually we decided that it would probably be better to take all of the electronic components out of the box, get it working, and then assemble everything at the end.
 
-Because we had to use a mini breadboard in the place of the photointerrupter, this is a zoomed in screenshot of the individual pins. Your can follow colored wires to their pins in the larger image.
+---- 
 
-<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/SDA_SCL_PID.png?raw=true"
-width="200">
+|Breadboard Zoom-In | Metro Board Zoom-In | 
+|-|-|
+| <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Photointerrupter_PID.png?raw=true" width="300"> | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/SDA_SCL_PID.png?raw=true" width="300"> |
+|Because we had to use a mini breadboard in the place of the photointerrupter, this is a zoomed in screenshot of the individual pins. Your can follow colored wires to their pins in the larger image.| Similar to the image beside it, this is an inflated image used to exemplify the SCL and SDA pins that don't appear on Arduino's, but do on Metro's, which is what we used. SCL and SDA pins are important for the LCD display. Again, you can follow the wire colors to the LCD. |
 
-Similar to the image beside it, this is an inflated image used to exemplify the SCL and SDA pins that don't appear on Arduino's, but do on Metro's, which is what we used. SCL and SDA pins are important for the LCD display. Again, you can follow the wire colors to the LCD.
+
+
+
+
+
+
 
 ## Evidence
+
 [GIF of working LCD displaying RPM]
+
 ##### This is evidence of the LCD displaying RPM, and the photointerrupter working.
 
 ----
