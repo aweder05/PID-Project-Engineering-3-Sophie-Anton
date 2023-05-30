@@ -162,7 +162,7 @@ Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A 
 
 ## __Wiring__
 
-<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Wiring%20Diagram%20PID.png?raw=true" width="600"> 
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Wiring%20Diagram%20PID.png?raw=true" width="800"> 
 
 ----
 
