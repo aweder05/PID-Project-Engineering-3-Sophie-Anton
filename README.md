@@ -41,7 +41,7 @@ The most likely outcome is that we will probably need more time for some things,
 
 # **Planning**
 
-| ###Planning_for_CAD | ###Planning_for_Code |
+| Planning_for_CAD | Planning_for_Code |
 | :------------ | :------------- |
 | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/CAD.PID.Planning.png?raw=true" width="300">  |  <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/PLANNING.CODE.png?raw=true" width="300"> |
 | From the Robotic Arm Project, we learned that learned that ambitious ideas mixed with inefficient planning produces poor results. For the PID project, we modeled a box where the PID is performed between the motor and the photointerrupter, and is displayed on an LCD screen. | I had trouble understanding PID initially, which is why I had to organize my thoughts as shown above. I made a checklist of what to do in order to get the project working. In the future I think it would be a good idea to make this a habit before starting code so that I can start with small tasks leading up to a larger one
