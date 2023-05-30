@@ -160,6 +160,16 @@ if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the rema
 ```
 Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
 
+## Evidence for Code Prototype 
+
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/earlycodeevidence.gif?raw=true" width="400">
+
+##### This is evidence of the LCD displaying RPM, and the photointerrupter working properly. The video is a little bit shaky, but what is basically happening is that first you can see a little piece of red wire being waved back and forth between the photointerruptor. Then, you can see that this value is then printed on the serial monitor, and then on the LCD Display.  
+
+----
+
+
+
 ## __Wiring__
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/updated-wiring5.30.23.png?raw=true"> 
@@ -182,11 +192,4 @@ Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A 
 
 
 
-## Evidence
-
-[GIF of working LCD displaying RPM]
-
-##### This is evidence of the LCD displaying RPM, and the photointerrupter working.
-
-----
 
