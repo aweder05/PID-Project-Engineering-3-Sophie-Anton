@@ -37,16 +37,25 @@ The most likely outcome is that we will probably need more time for some things,
 | **Week of 5/22-26**  | PID Tuning/Testing   |
 | **Week of 5/29-6/2** | Extra Time           |
 
-``python
 
 ## CAD_Design_for_PID_Project
 
 We knew that we needed to choose a simple project to make it so that we wouldn't have to cram in everything all at once near the end of our project. That was reflected in the way we approached our CAD design, as we opted for a simple T-Slot box with all the electronic elements on the inside. The only slightly-challenging element of our CAD Design process was making sure that there was enough space for everything, especially since we knew that we would need plenty of space for all of the wiring for the LCD, LED, Adafruit Metro, Switch, TT-Motor, and finally the Photointerruptor. In the end, reflecting on what we could have probably done better, it might have been smart to make the box a little bigger in order to allow for better ease if access while wiring.
 
 ## Materials
-- 
+- Adafruit Metro M4 Airift Lite Board
+- Breadboard
+- I2C Liquid Crystal Display 2x16
+- Panel-Mount LED
+- Panel-Mount Switch 
+- Adafruit Photointerruptor 
+- TT-Motor / DC Gearbox Motor
+- Arduino Prototyping Shield 
+- 9V Battery Pack
 
-## Planning_for_CAD
+---- 
+
+## **Planning_for_CAD**
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/CAD.PID.Planning.png?raw=true" width="300">
 
