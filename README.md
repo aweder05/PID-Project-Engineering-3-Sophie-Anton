@@ -1,6 +1,8 @@
 # PID Project Engineering 3 
 # The Banana of Doom 
 
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/banana%20border.png?raw=true" width = 700>
+
 ## Table of Contents 
 
 * [Project Idea](#Project_Idea)
