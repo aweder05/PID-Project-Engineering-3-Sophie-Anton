@@ -204,7 +204,11 @@ if interrupts % 10 == 0:
 
 ## __Wiring__
 
-<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/updated-wiring5.30.23.png?raw=true"> 
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/updated-wiring5.30.23.png?raw=true" width="500"> 
+
+###### The link for the wiring diagram is here, in case the image is not large enough: 
+
+[Wiring Diagram Link](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/updated-wiring5.30.23.png?raw=true)
 
 ----
 
@@ -218,6 +222,10 @@ if interrupts % 10 == 0:
 |Because we had to use a mini breadboard in the place of the photointerrupter, this is a zoomed in screenshot of the individual pins. Your can follow colored wires to their pins in the larger image.| Similar to the image beside it, this is an inflated image used to exemplify the SCL and SDA pins that don't appear on Arduino's, but do on Metro's, which is what we used. SCL and SDA pins are important for the LCD display. Again, you can follow the wire colors to the LCD. |
 
 ## Wiring Diagram V.2
-<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/WiringDiagramPIDV.2.png?raw=true" width="400">
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/WiringDiagramPIDV.2.png?raw=true" width="700">
+
+----
 
 ##### This is the wiring updated wiring diagram. Nearly everything stayed the same except for the changing of the transistor and the implementation of the potentiomenter for the tuning of the PID. This is almost the final wiring, with the exclusion of the potentiomenter, and the inclusion of the LED.
+
+###### Note: the Wiring Diagram V.2 uses the same "Breadboard Zoom In" as the initial wiring diagram for the prototype. 
