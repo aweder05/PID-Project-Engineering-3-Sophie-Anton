@@ -8,12 +8,12 @@
 * [Project Idea](#Project_Idea)
 * [Proposed Project Schedule](#Proposed_Project_Schedule)
 * [CAD Design for PID Project](#CAD_Design_for_PID_Project)
-* [Planning for CAD](#Planning_for_CAD)
-* [Planning for Code](#Planning_for_Code)
+* [Planning](#Planning)
 * [CAD Images](#CAD_Images)
 * [Code Prototype and Evidence](#Code_Prototype_and_Evidence)
+* [Evidence for Code Prototype](#Evidence_for_Code_Prototype)
 * [Wiring](#Wiring)
-* [Evidence](#Evidence)
+
 <!-- <a name="CAD_Design_for_PID_Project"></a>  -->
 <!-- <a name="Project_Idea"></a> -->
 
@@ -39,7 +39,7 @@ The most likely outcome is that we will probably need more time for some things,
 | **Week of 5/22-26**  | PID Tuning/Testing   |
 | **Week of 5/29-6/2** | Extra Time           |
 
-# **Planning**
+## **Planning**
 
 | Planning_for_CAD | Planning_for_Code |
 | :------------ | :------------- |
@@ -77,78 +77,13 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 |This image shows the outside of the box. This angle exemplifies what the box would look like fabricated. The LED and switch are placed around the LCD, with the battery pack on top of the box, and the photointerrupter and motor piece on the side. | This is the piece that attaches to the motor.
 
 ## **Code_Prototype_and_Evidence**
+----
 
-```python
-import board
-import time
-import pwmio
-import analogio as AIO
-import digitalio as DIO
-from lcd.lcd import LCD
-from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
-import PID_CPY as PidLib
+### Link for Prototype Code can be found [Here](prototype.py), for the sake of space
 
-setpoint = 5
+----
 
-
-pid = PidLib.PID(5, 0.01, 0.1, setpoint= setpoint)
-
-
-i2c = board.I2C()
-lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
-
-inter = DIO.DigitalInOut(board.D11)
-inter.direction = DIO.Direction.INPUT
-inter.pull = DIO.Pull.UP
-
-# motor =  pwmio.PWMOut(board.D7)
-# motor.duty_cycle = 65535``
-# print("running")
-# time.sleep(0.15)
-
-#  these are the variables needed for the code
-intTime =0
-interrupts =0
-time1 = 0
-time2 = 0
-RPM = 0
-lastVal = False
-
-
-
-while True: 
-    intTime +=1
-    if intTime % 250 ==1 :
-        
-        #put all prints in here
-        print(f"{inter.value} {interrupts} Rpm: {RPM} ")
-        lcd.clear()  #  setting lcd up to print
-        lcd.set_cursor_pos(0, 0)
-        lcd.print(str("RPM = "))
-        lcd.print(str(RPM))
-
-    
-    #  ensuring that the photointerrupter doesn't output more than one interrupt per interrupt
-    if inter.value and lastVal == False:
-        lastVal = True
-        interrupts += 1
-    if not inter.value:
-        lastVal  = False
-
-    #  this is the rpm math
-    if interrupts % 10 == 0:
-        time1= time.monotonic()
-    elif interrupts % 10 == 9:
-        time2 = time.monotonic()
-        RPM = 60/((time2-time1)/10)
-
-        
-    # if motor.duty_cycle == True:
-    #     lcd.clear()
-    #     lcd.set_cursor_pos(0, 1)
-    #     lcd.print(str("ON"))
-```
-This is the beginning of the PID code. So far we have the Rotations per Minute being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
+##### This is the beginning of the PID code. So far we have the Rotations per Minute being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
 
 I needed help with the code for the RPM:
 ```python
@@ -158,9 +93,41 @@ if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the rema
         time2 = time.monotonic()
         RPM = 60/((time2-time1)/10)
 ```
-Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
+##### Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
 
-## Evidence for Code Prototype 
+```python
+if inter.value and lastVal == False:
+        lastVal = True
+        interrupts += 1
+    if not inter.value:
+        lastVal  = False
+```
+##### These lines ensure that the photointerrupter doesn't read an interrupt as more than one interrupt. It acts as a debouncer.
+
+### Rewritting of RPM code
+
+```python
+# if enough time has elapsed - calc RPM    
+    if time.monotonic() > previous_time + rpmCheckTime:
+        print("calc RPM") #  variable in code that isn't written in this excerpt; it's the calculation of the RPM
+        time_diff = time.monotonic() - previous_time + 0.1
+        RPM = (interrupts/2.0/time_diff) * 60.0
+        #  the amount of interrupts, divided by 2 (number of spokes on wheel), divided by the time between them, multiplied by 60
+        previous_time = time.monotonic()
+        interrupts = 0
+```
+##### We added the code shown above in place of the code postioned below.
+##### Although this code is longer and admittedly less efficient, it makes more sense for our project, and uses language that Anton and I can better comprehend.
+```python
+if interrupts % 10 == 0:
+        time1= time.monotonic()
+    elif interrupts % 10 == 9:
+        time2 = time.monotonic()  #  defining the RPM
+        RPM = 60/((time2-time1)/10)
+```
+##### Although the code shown above was written well, it wasn't fit for our project. The math was incorrect, leading to the incorrect RPM.
+
+## Evidence_for_Code_Prototype 
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/earlycodeevidence.gif?raw=true" width="400">
 
@@ -170,13 +137,17 @@ Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A 
 
 
 
-## __Wiring__
+## __Wiring for Prototype__
 
-<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/updated-wiring5.30.23.png?raw=true"> 
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/updated-wiring5.30.23.png?raw=true" width="500"> 
+
+###### The link for the wiring diagram is here, in case the image is not large enough: 
+
+[Wiring Diagram Link](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/updated-wiring5.30.23.png?raw=true)
 
 ----
 
-##### This is the final wiring. The hardest thing about wiring this project was the space that we allowed ourselves to work with from the beginning. Since we wanted to avoid having a large and bulky box, we decided during our design process that we would try and fit everything inside a relatively small box. Eventually we decided that it would probably be better to take all of the electronic components out of the box, get it working, and then assemble everything at the end.
+##### This is probably going to be the final wiring. The hardest thing about wiring this project was the space that we allowed ourselves to work with from the beginning. Since we wanted to avoid having a large and bulky box, we decided during our design process that we would try and fit everything inside a relatively small box. Eventually we decided that it would probably be better to take all of the electronic components out of the box, get it working, and then assemble everything at the end.
 
 ---- 
 
@@ -185,11 +156,27 @@ Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A 
 | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Photointerrupter_PID.png?raw=true" width="300"> | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/SDA_SCL_PID.png?raw=true" width="300"> |
 |Because we had to use a mini breadboard in the place of the photointerrupter, this is a zoomed in screenshot of the individual pins. Your can follow colored wires to their pins in the larger image.| Similar to the image beside it, this is an inflated image used to exemplify the SCL and SDA pins that don't appear on Arduino's, but do on Metro's, which is what we used. SCL and SDA pins are important for the LCD display. Again, you can follow the wire colors to the LCD. |
 
+## **Wiring Diagram V.2 | Final Wiring**
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/WiringDiagramPIDV.2.png?raw=true" width="700">
 
+----
 
+##### This is the wiring updated wiring diagram. Nearly everything stayed the same except for the changing of the transistor and the implementation of the potentiomenter for the tuning of the PID. This is almost the final wiring, with the exclusion of the potentiomenter, and the inclusion of the LED.
 
+###### Note: the Wiring Diagram V.2 uses the same "Breadboard Zoom In" and "Metro Board Zoom-In" as the initial wiring diagram for the prototype. 
 
+----
 
+## Final Code
 
+[insert code here]
 
+[very short code reflection]
 
+## **Reflection** 
+
+Looking back, scrolling through all of our documentation, you can really tell how much time we put into our final product. Although sometimes we had setbacks, or problems that took us annoyingly long to solve. But it also taught us even more about many things, especially time management and code. One thing that I'm happy to say is that I am really proud of how we used our time to work as hard as we could on one task, and then moved on to the next. I am also very proud because of how we spent so much extra time in the lab just trying to make any sort of progress. PID is challengind, and it is definitely a good thing that we realized such so early on. It helped us plan better, come up with more ideas, and eventually it taught us how to optimize all aspects of our project so that we're able to actually to work with PID. 
+
+The first step after planning was of course to start with the computer aided design portion of our project. This was probably the least difficult and least time-consuming part of our project, since it only took one or two days. Looking back at that design process, we could've definitely made our box a little bigger for more room to wire everything up during assembly, and also made the spinner a little bit more prominent, since it is the main element of our project. 
+
+After that, our focus was immediately directed towards wir
