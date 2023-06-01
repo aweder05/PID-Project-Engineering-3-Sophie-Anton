@@ -11,6 +11,7 @@ setpoint = 5
 
 pid = PidLib.PID(5, 0.01, 0.1, setpoint= setpoint)
 
+time.sleep(3)
 #  defining lcd
 i2c = board.I2C()
 lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
@@ -21,6 +22,7 @@ inter.direction = DIO.Direction.INPUT  #interrupter is the input
 inter.pull = DIO.Pull.UP
 
 #  defining motor
+pot = AIO.AnalogIn(board.A0)
 motor =  pwmio.PWMOut(board.D7)
 motor.duty_cycle = 65535
 print("running")
@@ -45,6 +47,11 @@ oldPhotoVal = False # Used to make sure we only count the first loop when interu
 
 
 while True: 
+
+    motor_speed = pot.value # both of these values are 16 bit so no mapping is needed
+    print(f"Speed: {motor_speed}")
+    motor.duty_cycle = motor_speed
+
     intTime +=1
     if intTime % 2500 ==1 : # Every however many loops, print to LCD to reduce flickering
         
