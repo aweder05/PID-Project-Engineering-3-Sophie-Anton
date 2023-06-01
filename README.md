@@ -11,8 +11,9 @@
 * [Planning](#Planning)
 * [CAD Images](#CAD_Images)
 * [Code Prototype and Evidence](#Code_Prototype_and_Evidence)
-* [Wiring](#Wiring)
 * [Evidence for Code Prototype](#Evidence_for_Code_Prototype)
+* [Wiring](#Wiring)
+
 <!-- <a name="CAD_Design_for_PID_Project"></a>  -->
 <!-- <a name="Project_Idea"></a> -->
 
@@ -38,7 +39,7 @@ The most likely outcome is that we will probably need more time for some things,
 | **Week of 5/22-26**  | PID Tuning/Testing   |
 | **Week of 5/29-6/2** | Extra Time           |
 
-# **Planning**
+## **Planning**
 
 | Planning_for_CAD | Planning_for_Code |
 | :------------ | :------------- |
