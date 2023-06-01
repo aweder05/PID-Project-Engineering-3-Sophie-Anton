@@ -148,7 +148,7 @@ while True:
     #     lcd.set_cursor_pos(0, 1)
     #     lcd.print(str("ON"))
 ```
-This is the beginning of the PID code. So far we have the Rotations per Minute being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
+##### This is the beginning of the PID code. So far we have the Rotations per Minute being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
 
 I needed help with the code for the RPM:
 ```python
@@ -158,7 +158,7 @@ if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the rema
         time2 = time.monotonic()
         RPM = 60/((time2-time1)/10)
 ```
-Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
+#### Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
 
 ```python
 if inter.value and lastVal == False:
@@ -167,7 +167,30 @@ if inter.value and lastVal == False:
     if not inter.value:
         lastVal  = False
 ```
-These lines ensure that the photointerrupter doesn't read an interrupt as more than one interrupt. It acts as a debouncer.
+##### These lines ensure that the photointerrupter doesn't read an interrupt as more than one interrupt. It acts as a debouncer.
+
+## Rewritting of RPM code
+
+```python
+# if enough time has elapsed - calc RPM    
+    if time.monotonic() > previous_time + rpmCheckTime:
+        print("calc RPM") #  variable in code that isn't written in this excerpt; it's the calculation of the RPM
+        time_diff = time.monotonic() - previous_time + 0.1
+        RPM = (interrupts/2.0/time_diff) * 60.0
+        #  the amount of interrupts, divided by 2 (number of spokes on wheel), divided by the time between them, multiplied by 60
+        previous_time = time.monotonic()
+        interrupts = 0
+```
+##### We added the code shown above in place of the code postioned below.
+##### Although this code is longer and admittedly less efficient, it makes more sense for our project, and uses language that Anton and I can better comprehend.
+```python
+if interrupts % 10 == 0:
+        time1= time.monotonic()
+    elif interrupts % 10 == 9:
+        time2 = time.monotonic()  #  defining the RPM
+        RPM = 60/((time2-time1)/10)
+```
+##### Although the code shown above was written well, it wasn't fit for our project. The math was incorrect, leading to the incorrect RPM.
 
 ## Evidence for Code Prototype 
 
@@ -193,26 +216,3 @@ These lines ensure that the photointerrupter doesn't read an interrupt as more t
 |-|-|
 | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Photointerrupter_PID.png?raw=true" width="300"> | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/SDA_SCL_PID.png?raw=true" width="300"> |
 |Because we had to use a mini breadboard in the place of the photointerrupter, this is a zoomed in screenshot of the individual pins. Your can follow colored wires to their pins in the larger image.| Similar to the image beside it, this is an inflated image used to exemplify the SCL and SDA pins that don't appear on Arduino's, but do on Metro's, which is what we used. SCL and SDA pins are important for the LCD display. Again, you can follow the wire colors to the LCD. |
-
-## Rewritting of RPM code
-
-```python
-# if enough time has elapsed - calc RPM    
-    if time.monotonic() > previous_time + rpmCheckTime:
-        print("calc RPM") #  variable in code that isn't written in this excerpt; it's the calculation of the RPM
-        time_diff = time.monotonic() - previous_time + 0.1
-        RPM = (interrupts/2.0/time_diff) * 60.0
-        #  the amount of interrupts, divided by 2 (number of spokes on wheel), divided by the time between them, multiplied by 60
-        previous_time = time.monotonic()
-        interrupts = 0
-```
-##### We added the code shown above in place of the code postioned below.
-##### Although this code is longer and admittedly less efficient, it makes more sense for or project, and uses language that Anton and I can better comprehend.
-```python
-if interrupts % 10 == 0:
-        time1= time.monotonic()
-    elif interrupts % 10 == 9:
-        time2 = time.monotonic()  #  defining the RPM
-        RPM = 60/((time2-time1)/10)
-```
-##### Although the code shown above was written well, it wasn't fit for our project. The math was incorrect, leading to the incorrect RPM.
