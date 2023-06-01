@@ -77,77 +77,12 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 |This image shows the outside of the box. This angle exemplifies what the box would look like fabricated. The LED and switch are placed around the LCD, with the battery pack on top of the box, and the photointerrupter and motor piece on the side. | This is the piece that attaches to the motor.
 
 ## **Code_Prototype_and_Evidence**
+----
 
-```python
-import board
-import time
-import pwmio
-import analogio as AIO
-import digitalio as DIO
-from lcd.lcd import LCD
-from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
-import PID_CPY as PidLib
+### Link for Prototype Code can be found [Here](prototype.py), for the sake of space
 
-setpoint = 5
+----
 
-
-pid = PidLib.PID(5, 0.01, 0.1, setpoint= setpoint)
-
-
-i2c = board.I2C()
-lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
-
-inter = DIO.DigitalInOut(board.D11)
-inter.direction = DIO.Direction.INPUT
-inter.pull = DIO.Pull.UP
-
-# motor =  pwmio.PWMOut(board.D7)
-# motor.duty_cycle = 65535``
-# print("running")
-# time.sleep(0.15)
-
-#  these are the variables needed for the code
-intTime =0
-interrupts =0
-time1 = 0
-time2 = 0
-RPM = 0
-lastVal = False
-
-
-
-while True: 
-    intTime +=1
-    if intTime % 250 ==1 :
-        
-        #put all prints in here
-        print(f"{inter.value} {interrupts} Rpm: {RPM} ")
-        lcd.clear()  #  setting lcd up to print
-        lcd.set_cursor_pos(0, 0)
-        lcd.print(str("RPM = "))
-        lcd.print(str(RPM))
-
-    
-    #  ensuring that the photointerrupter doesn't output more than one interrupt per interrupt
-    if inter.value and lastVal == False:
-        lastVal = True
-        interrupts += 1
-    if not inter.value:
-        lastVal  = False
-
-    #  this is the rpm math
-    if interrupts % 10 == 0:
-        time1= time.monotonic()
-    elif interrupts % 10 == 9:
-        time2 = time.monotonic()
-        RPM = 60/((time2-time1)/10)
-
-        
-    # if motor.duty_cycle == True:
-    #     lcd.clear()
-    #     lcd.set_cursor_pos(0, 1)
-    #     lcd.print(str("ON"))
-```
 ##### This is the beginning of the PID code. So far we have the Rotations per Minute being calculated (implying that the photointerrupter is functioning properly) and sent to the lcd display. Our next steps are to get the motor running, and control it using PID.
 
 I needed help with the code for the RPM:
@@ -202,7 +137,7 @@ if interrupts % 10 == 0:
 
 
 
-## __Wiring__
+## __Wiring for Prototype__
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/updated-wiring5.30.23.png?raw=true" width="500"> 
 
@@ -221,11 +156,11 @@ if interrupts % 10 == 0:
 | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Photointerrupter_PID.png?raw=true" width="300"> | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/SDA_SCL_PID.png?raw=true" width="300"> |
 |Because we had to use a mini breadboard in the place of the photointerrupter, this is a zoomed in screenshot of the individual pins. Your can follow colored wires to their pins in the larger image.| Similar to the image beside it, this is an inflated image used to exemplify the SCL and SDA pins that don't appear on Arduino's, but do on Metro's, which is what we used. SCL and SDA pins are important for the LCD display. Again, you can follow the wire colors to the LCD. |
 
-## Wiring Diagram V.2
+## **Wiring Diagram V.2 | Final Wiring**
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/WiringDiagramPIDV.2.png?raw=true" width="700">
 
 ----
 
 ##### This is the wiring updated wiring diagram. Nearly everything stayed the same except for the changing of the transistor and the implementation of the potentiomenter for the tuning of the PID. This is almost the final wiring, with the exclusion of the potentiomenter, and the inclusion of the LED.
 
-###### Note: the Wiring Diagram V.2 uses the same "Breadboard Zoom In" as the initial wiring diagram for the prototype. 
+###### Note: the Wiring Diagram V.2 uses the same "Breadboard Zoom In" and "Metro Board Zoom-In" as the initial wiring diagram for the prototype. 
