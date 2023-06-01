@@ -164,3 +164,19 @@ if interrupts % 10 == 0:
 ##### This is the wiring updated wiring diagram. Nearly everything stayed the same except for the changing of the transistor and the implementation of the potentiomenter for the tuning of the PID. This is almost the final wiring, with the exclusion of the potentiomenter, and the inclusion of the LED.
 
 ###### Note: the Wiring Diagram V.2 uses the same "Breadboard Zoom In" and "Metro Board Zoom-In" as the initial wiring diagram for the prototype. 
+
+----
+
+## Final Code
+
+[insert code here]
+
+[very short code reflection]
+
+## **Reflection** 
+
+Looking back, scrolling through all of our documentation, you can really tell how much time we put into our final product. Although sometimes we had setbacks, or problems that took us annoyingly long to solve. But it also taught us even more about many things, especially time management and code. One thing that I'm happy to say is that I am really proud of how we used our time to work as hard as we could on one task, and then moved on to the next. I am also very proud because of how we spent so much extra time in the lab just trying to make any sort of progress. PID is challengind, and it is definitely a good thing that we realized such so early on. It helped us plan better, come up with more ideas, and eventually it taught us how to optimize all aspects of our project so that we're able to actually to work with PID. 
+
+The first step after planning was of course to start with the computer aided design portion of our project. This was probably the least difficult and least time-consuming part of our project, since it only took one or two days. Looking back at that design process, we could've definitely made our box a little bigger for more room to wire everything up during assembly, and also made the spinner a little bit more prominent, since it is the main element of our project. 
+
+After that, our focus was immediately directed towards wir
