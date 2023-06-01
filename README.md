@@ -158,7 +158,7 @@ if interrupts % 10 == 0:  #  if the interrupt number divided by ten has the rema
         time2 = time.monotonic()
         RPM = 60/((time2-time1)/10)
 ```
-#### Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
+##### Thanks to Paul Weder, I learned that the percent sign is a "modulo operator". A modulo operator divides the left hand number/variable with the right hand number/variable and retrieves the remainder.
 
 ```python
 if inter.value and lastVal == False:
