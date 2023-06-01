@@ -169,7 +169,7 @@ if inter.value and lastVal == False:
 ```
 ##### These lines ensure that the photointerrupter doesn't read an interrupt as more than one interrupt. It acts as a debouncer.
 
-## Rewritting of RPM code
+### Rewritting of RPM code
 
 ```python
 # if enough time has elapsed - calc RPM    
