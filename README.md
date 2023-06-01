@@ -8,12 +8,11 @@
 * [Project Idea](#Project_Idea)
 * [Proposed Project Schedule](#Proposed_Project_Schedule)
 * [CAD Design for PID Project](#CAD_Design_for_PID_Project)
-* [Planning for CAD](#Planning_for_CAD)
-* [Planning for Code](#Planning_for_Code)
+* [Planning](#Planning)
 * [CAD Images](#CAD_Images)
 * [Code Prototype and Evidence](#Code_Prototype_and_Evidence)
 * [Wiring](#Wiring)
-* [Evidence](#Evidence)
+* [Evidence for Code Prototype](#Evidence_for_Code_Prototype)
 <!-- <a name="CAD_Design_for_PID_Project"></a>  -->
 <!-- <a name="Project_Idea"></a> -->
 
@@ -192,7 +191,7 @@ if interrupts % 10 == 0:
 ```
 ##### Although the code shown above was written well, it wasn't fit for our project. The math was incorrect, leading to the incorrect RPM.
 
-## Evidence for Code Prototype 
+## Evidence_for_Code_Prototype 
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/earlycodeevidence.gif?raw=true" width="400">
 
