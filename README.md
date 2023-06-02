@@ -207,6 +207,13 @@ The link for their repository can be found here: [**link**](https://github.com/C
 
 My partner and I spent the most time in calculating the RPM. We had a lot of help from Paul Weder in the beginning, then after better understanding the function of PID, and the importance of RPM, we began to tune the code to our preferations. After coding the RPM, a few lines of code were written to connect the motor power to the PID. Finally, we fine tuned our project to match its setpoint, and the code was done!
 
+## Pictures 
+
+| | | |
+|-- |-- | --|
+|<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5615.jpg?raw=true" height="200"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5616.jpg?raw=true" height="200"> | | 
+| | | | 
+
 # **Final Working Project Evidence**
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/finaldevidence.gif?raw=true" height="400">
