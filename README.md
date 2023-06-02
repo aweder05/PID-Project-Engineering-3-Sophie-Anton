@@ -8,12 +8,18 @@
 * [Project Porposal](#Project_Idea)
     * [Project Idea](#Project_Idea)
     * [Proposed Project Schedule](#Proposed_Project_Schedule)
-* [CAD Design for PID Project](#CAD_Design_for_PID_Project)
 * [Planning](#Planning)
-* [CAD Images](#CAD_Images)
-* [Code Prototype and Evidence](#Code_Prototype_and_Evidence)
-* [Evidence for Code Prototype](#Evidence_for_Code_Prototype)
-* [Wiring for Prototype](#Wiring_for_Prototype)
+* [Materials](Materials)
+* [CAD](#CAD_Design_for_PID_Project)
+    * [CAD Design for PID Project](#CAD_Design_for_PID_Project)
+    * [CAD Images](#CAD_Images)
+* [Code/Wiring](#Code_Prototype_and_Evidence)
+    * [Code Prototype and Evidence](#Code_Prototype_and_Evidence)
+    * [Evidence for Code Prototype](#Evidence_for_Code_Prototype)
+    * [Wiring for Prototype](#Wiring_for_Prototype)
+    * []
+    * [Wiring Diagram V.2 | Final Wiring](#Wiring_Diagram_V.2_|_Final_Wiring
+)
 
 <!-- <a name="CAD_Design_for_PID_Project"></a>  -->
 <!-- <a name="Project_Idea"></a> -->
@@ -179,7 +185,7 @@ motor.duty_cycle = int(pid(RPM))
 | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/Photointerrupter_PID.png?raw=true" width="300"> | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/SDA_SCL_PID.png?raw=true" width="300"> |
 |Because we had to use a mini breadboard in the place of the photointerrupter, this is a zoomed in screenshot of the individual pins. Your can follow colored wires to their pins in the larger image.| Similar to the image beside it, this is an inflated image used to exemplify the SCL and SDA pins that don't appear on Arduino's, but do on Metro's, which is what we used. SCL and SDA pins are important for the LCD display. Again, you can follow the wire colors to the LCD. |
 
-## **Wiring Diagram V.2 | Final Wiring**
+## **Wiring_Diagram_V.2_|_Final_Wiring**
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/WiringDiagramPIDV.2.png?raw=true" width="700">
 
 ----
