@@ -7,7 +7,7 @@
 
 * [Project Porposal](#Project_Idea)
     * [Project Idea](#Project_Idea)
-    * [Proposed Project Schedule](#Propsed_Project_Schedule)
+    * [Proposed Project Schedule](#Proposed_Project_Schedule)
 * [CAD Design for PID Project](#CAD_Design_for_PID_Project)
 * [Planning](#Planning)
 * [CAD Images](#CAD_Images)
