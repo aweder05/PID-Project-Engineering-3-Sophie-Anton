@@ -116,8 +116,10 @@ if inter.value and lastVal == False:
         previous_time = time.monotonic()
         interrupts = 0
 ```
+
 ##### We added the code shown above in place of the code postioned below.
 ##### Although this code is longer and admittedly less efficient, it makes more sense for our project, and uses language that Anton and I can better comprehend.
+
 ```python
 if interrupts % 10 == 0:
         time1= time.monotonic()
