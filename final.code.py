@@ -7,9 +7,10 @@ from lcd.lcd import LCD
 from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
 import PID_CPY as PidLib
 
-setpoint = 5
+setpoint = 180
 
-pid = PidLib.PID(5, 0.01, 0.1, setpoint= setpoint)
+pid = PidLib.PID(375, 25, 150.0, setpoint= setpoint)
+pid.output_limits = (10000, 50000)
 
 time.sleep(3)
 #  defining lcd
@@ -44,19 +45,24 @@ rpmCheckState = True
 photoVal = False           
 oldPhotoVal = False # Used to make sure we only count the first loop when interupt is broken
 
-
+time1 =0
+time2 =0
+RPM = 0
 
 while True: 
 
-    motor_speed = pot.value # both of these values are 16 bit so no mapping is needed
-    print(f"Speed: {motor_speed} {interrupts} {RPM}")
-    motor.duty_cycle = motor_speed
+    #  testing range w pot
+    # motor_speed = pot.value # both of these values are 16 bit so no mapping is needed
+    
+    # motor.duty_cycle = motor_speed
+    
+    motor.duty_cycle = int(pid(RPM))
 
     intTime +=1
-    if intTime % 2500 ==1 : # Every however many loops, print to LCD to reduce flickering
+    if intTime % 1000 ==1 : # Every however many loops, print to LCD to reduce flickering
         
         #put all prints in here
-        print(f"{inter.value} {interrupts} Rpm: {RPM} ")
+        # print(f"{inter.value} {interrupts} Rpm: {RPM} TMC: {time.monotonic()}")
         #  setting up/writing to LCD
         lcd.clear()
         lcd.set_cursor_pos(0, 0)
@@ -66,18 +72,33 @@ while True:
     #  Prevents interrupter from interrupting more than once per interrupt
     photoVal = inter.value 
 
+
     if photoVal and (oldPhotoVal == False):
         oldPhotoVal = True
         interrupts += 1
+        
+        if interrupts % 2 == 0:
+            time2= time.monotonic()
+            RPM = 1.0/((time2-time1))*60
+            #print((f"{inter.value} {interrupts} Rpm: {RPM} 1"))
+            time.sleep(0.05)
+            time1 = time2
+        elif interrupts % 2 == 1:    # first 
+            time2 = time.monotonic()
+            RPM = 1.0/((time2-time1))*60
+            #print((f"{inter.value} {interrupts} Rpm: {RPM} 2"))
+            time.sleep(0.05)
+            time1 = time2
+    print(pid.components)
     if not photoVal:
         oldPhotoVal  = False
 
 
 
     # # if enough time has elapsed - calc RPM    
-    if time.monotonic() > previous_time + rpmCheckTime:
-        print("calc RPM")
-        time_diff = time.monotonic() - previous_time + 0.1
-        RPM = (interrupts/2.0/time_diff) * 60.0
-        previous_time = time.monotonic()
-        interrupts = 0
+    # if time.monotonic() > previous_time + rpmCheckTime:
+    #     print("calc RPM")
+    #     time_diff = time.monotonic() - previous_time + 0.1
+    #     RPM = (interrupts/2.0/time_diff) * 60.0
+    #     previous_time = time.monotonic()
+    #     interrupts = 0
