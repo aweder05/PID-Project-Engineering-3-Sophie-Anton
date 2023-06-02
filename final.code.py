@@ -9,7 +9,7 @@ import PID_CPY as PidLib
 
 setpoint = 180
 
-pid = PidLib.PID(375, 25, 150.0, setpoint= setpoint)
+pid = PidLib.PID(360, 30, 150.0, setpoint= setpoint)
 pid.output_limits = (10000, 50000)
 
 time.sleep(3)
@@ -80,16 +80,16 @@ while True:
         if interrupts % 2 == 0:
             time2= time.monotonic()
             RPM = 1.0/((time2-time1))*60
-            #print((f"{inter.value} {interrupts} Rpm: {RPM} 1"))
+            print((f"{inter.value} {interrupts} Rpm: {RPM} 1"))
             time.sleep(0.05)
             time1 = time2
         elif interrupts % 2 == 1:    # first 
             time2 = time.monotonic()
             RPM = 1.0/((time2-time1))*60
-            #print((f"{inter.value} {interrupts} Rpm: {RPM} 2"))
+            print((f"{inter.value} {interrupts} Rpm: {RPM} 2"))
             time.sleep(0.05)
             time1 = time2
-    print(pid.components)
+    #print(pid.components)
     if not photoVal:
         oldPhotoVal  = False
 
