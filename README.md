@@ -161,7 +161,7 @@ if interrupts % 10 == 0:
 
 ----
 
-##### This is the wiring updated wiring diagram. Nearly everything stayed the same except for the changing of the transistor and the implementation of the potentiomenter for the tuning of the PID. This is almost the final wiring, with the exclusion of the potentiomenter, and the inclusion of the LED.
+##### This is the wiring updated wiring diagram. Nearly everything stayed the same except for the changing of the transistor and the implementation of the potentiomenter for the tuning of the PID. This is almost the final wiring, with the exclusion of the potentiomenter, and the inclusion of the LED. The Potentiometer has been included in this version of the wiring because of how we purposed it to try and figure our our desired Setpoint, and to prepare our variables for PID Tuning.
 
 ###### Note: the Wiring Diagram V.2 uses the same "Breadboard Zoom In" and "Metro Board Zoom-In" as the initial wiring diagram for the prototype. 
 
