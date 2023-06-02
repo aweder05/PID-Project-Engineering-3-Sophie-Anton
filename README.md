@@ -3,10 +3,11 @@
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/banana%20border.png?raw=true" width = 700>
 
-## Table of Contents 
+## __Table of Contents__
 
-* [Project Idea](#Project_Idea)
-* [Proposed Project Schedule](#Proposed_Project_Schedule)
+* [Project Porposal](#Project_Idea)
+    * [Project Idea](#Project_Idea)
+    * [Proposed Project Schedule](#Propsed_Project_Schedule)
 * [CAD Design for PID Project](#CAD_Design_for_PID_Project)
 * [Planning](#Planning)
 * [CAD Images](#CAD_Images)
@@ -23,7 +24,7 @@ Since we were unable to completely finish our last project, we decided that we w
 
 ---
 
-## Proposed_Project_Schedule  
+## __Proposed_Project_Schedule__
 
 Attached below is a table of our week-to-week goals, and what we would like to get done in that time.
 The most likely outcome is that we will probably need more time for some things, and less time for others. For example, code and assembly may need more time than CAD and planning.
@@ -52,13 +53,13 @@ The most likely outcome is that we will probably need more time for some things,
 
 ----
 
-## CAD_Design_for_PID_Project
+## __CAD_Design_for_PID_Project__
 
 We knew that we needed to choose a simple project to make it so that we wouldn't have to cram in everything all at once near the end of our project. That was reflected in the way we approached our CAD design, as we opted for a simple T-Slot box with all the electronic elements on the inside. The only slightly-challenging element of our CAD Design process was making sure that there was enough space for everything, especially since we knew that we would need plenty of space for all of the wiring for the LCD, LED, Adafruit Metro, Switch, TT-Motor, and finally the Photointerruptor. In the end, reflecting on what we could have probably done better, it might have been smart to make the box a little bigger in order to allow for better ease if access while wiring.
 
 ### __The link to our Onshape document can be found here: [link](https://cvilleschools.onshape.com/documents/eb53edd93056d781bfd5d1be/w/7a942e8a39012302d831d4e7/e/d26a37774ba29daec19e587c?renderMode=0&uiState=6479f2072df10846c8d284a7)__
 ---
-## Materials
+## __Materials__
 - Adafruit Metro M4 Airift Lite Board
 - Breadboard
 - I2C Liquid Crystal Display 2x16
@@ -149,7 +150,7 @@ motor.duty_cycle = int(pid(RPM))
 ```
 ##### This chunk of code sets the motor cycle to the PID, as opposed to the potentiometer.
 ---
-## Evidence_for_Code_Prototype
+## __Evidence_for_Code_Prototype__
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/earlycodeevidence.gif?raw=true" width="400">
 
@@ -189,7 +190,7 @@ motor.duty_cycle = int(pid(RPM))
 
 ----
 
-## Final Code
+## __Final Code__
 
 [insert code here]
 
