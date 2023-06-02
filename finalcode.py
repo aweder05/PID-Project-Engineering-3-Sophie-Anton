@@ -9,7 +9,7 @@ import PID_CPY as PidLib
 
 setpoint = 180
 
-pid = PidLib.PID(500, 0.0, 10, setpoint= setpoint)
+pid = PidLib.PID(375, 30.0, 150.0, setpoint= setpoint)
 pid.output_limits = (10000, 50000)
 
 time.sleep(3)
@@ -59,7 +59,7 @@ while True:
     motor.duty_cycle = int(pid(RPM))
 
     intTime +=1
-    if intTime % 2500 ==1 : # Every however many loops, print to LCD to reduce flickering
+    if intTime % 1000 ==1 : # Every however many loops, print to LCD to reduce flickering
         
         #put all prints in here
         # print(f"{inter.value} {interrupts} Rpm: {RPM} TMC: {time.monotonic()}")
