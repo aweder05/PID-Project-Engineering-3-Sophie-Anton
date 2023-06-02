@@ -127,6 +127,19 @@ if interrupts % 10 == 0:
 ```
 ##### Although the code shown above was written well, it wasn't fit for our project. The math was incorrect, leading to the incorrect RPM.
 
+```python
+setpoint = 180
+
+pid = PidLib.PID(500, 0.0, 10, setpoint= setpoint)
+pid.output_limits = (10000, 50000)
+```
+##### This is the new PID code we used to control the power going to the motor. In the 3rd line of this section of code, we stated the range of power the motor will be in to match the setpoint. We stated the set point on the 1st line, then attempted to match that setpoint on the code directly below. Key word: attempt. This isn't the final code for the PID, but because we've found that the motor responds to the PID code, our final steps are to tune it.
+
+```python
+motor.duty_cycle = int(pid(RPM))
+```
+##### This chunk of code sets the motor cycle to the PID, as opposed to the potentiometer.
+
 ## Evidence_for_Code_Prototype 
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/earlycodeevidence.gif?raw=true" width="400">
