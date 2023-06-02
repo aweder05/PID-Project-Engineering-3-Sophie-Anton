@@ -52,6 +52,8 @@ The most likely outcome is that we will probably need more time for some things,
 
 We knew that we needed to choose a simple project to make it so that we wouldn't have to cram in everything all at once near the end of our project. That was reflected in the way we approached our CAD design, as we opted for a simple T-Slot box with all the electronic elements on the inside. The only slightly-challenging element of our CAD Design process was making sure that there was enough space for everything, especially since we knew that we would need plenty of space for all of the wiring for the LCD, LED, Adafruit Metro, Switch, TT-Motor, and finally the Photointerruptor. In the end, reflecting on what we could have probably done better, it might have been smart to make the box a little bigger in order to allow for better ease if access while wiring.
 
+### __The link to our Onshape document can be found here: [link](https://cvilleschools.onshape.com/documents/eb53edd93056d781bfd5d1be/w/7a942e8a39012302d831d4e7/e/d26a37774ba29daec19e587c?renderMode=0&uiState=6479f2072df10846c8d284a7)__
+
 ## Materials
 - Adafruit Metro M4 Airift Lite Board
 - Breadboard
@@ -64,8 +66,6 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 - 9V Battery Pack
 
 ---- 
-
-
 
 ## **CAD_Images**
 
@@ -179,10 +179,12 @@ The link for their repository can be found here: [**link**](https://github.com/C
 
 ## **Reflection** 
 
-One thing . Although sometimes we had setbacks, or problems that took us annoyingly long to solve, we figured them of. But it also taught us even more about many things, especially time management and code. One thing that I'm happy to say is that I am really proud of how we used our time to work as hard as we could on one task, and then moved on to the next. I am also very proud because of how we spent so much extra time in the lab just trying to make any sort of progress. PID is challenging, and it is definitely a good thing that we realized such so early on. It helped us plan better, come up with more ideas, and eventually it taught us how to optimize all aspects of our project so that we're able to actually to work with PID. 
+This project was fun. Although sometimes we had setbacks, or problems that took us annoyingly long to solve, we figured them out. It also taught us even more about many things, especially time management and code. One thing that I'm happy to say is that I am really proud of how we used our time to work as hard as we could on one task, and then moved on to the next. I am also very proud because of how we spent so much extra time in the lab just trying to make any sort of progress. PID is challenging, and it is definitely a good thing that we realized such so early on. It helped us plan better, come up with more ideas, and eventually it taught us how to optimize all aspects of our project so that we're able to actually to work with PID. 
 
 The first step after planning was of course to start with the computer aided design portion of our project. This was probably the least difficult and least time-consuming part of our project, since it only took one or two days. Looking back at that design process, we could've definitely made our box a little bigger for more room to wire everything up during assembly, and also made the spinner a little bit more prominent, since it is the main element of our project. 
 
 After that, our focus was immediately directed towards wiring and coding our project. We started bit by bit, coding one part at a time, and then putting it all together. This strategy worked very well for us, because it allowed us to tackle one problem at a time, and work out problems one by one. If I, Anton, was to go back and do it all over again, I would definitely try and repurpose some of my old circuitpython code a lot more than I did. I did use certain bits of it, but I don't think I really realized how much easier things would be if I just used my old code which I already worked hard to figure out. Code obviously took up the bulk of the time for our project, but we managed to figure it out eventually, which is a huge achievement. Next to code, something else that did take a good bit to figure out was our wiring. Since our box was quite small, as previously stated, we used a Prototyping Shield for all of our wiring. In retrospect, I think the Prototyping Shield was perfect for our purpose, as it had plenty of power pins and GND pins for us to connect to our various different electronic elements of our project. 
 
-Our biggest regret for this project will forever be the fact that our final project did not have a banana on it. It became a little to trikcy 
+Our biggest regret for this project will forever be the fact that our final project did not have a banana on it. It became a little to tricky to calculate RPM since the banana was not a rectangle. This meant that there were two different intervals between interrupts, so therefore we just decided to make it a normal rectangle. Kind of a bummer since our whole project is called _The Banana of Doom_. 
+
+But other than that unfortunate mishap, everything else went relatively smoothly. Planning out every single week from the beginning really helped us stay on track and not spend too long on one thing. We have both learned a tremendous amount during our process of completing our project, and are very grateful for the help we have recieved, especially from our Teachers, and our classmates. We went from knowing absolutely nothing about PID to being semi-knowledgeable about it, and actually being able to apply PID to our own creation. 
