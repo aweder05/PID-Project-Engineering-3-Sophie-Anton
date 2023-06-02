@@ -21,6 +21,8 @@
 
 Since we were unable to completely finish our last project, we decided that we would choose a simple PID project. This was also because PID was a completely new concept to use, and because we knew that it would take up a lot of our time to find a basis of understanding for PID and how to apply that to our coding and all other aspects of our project. Therefore, we decided to do the following: create a box with a TT-Motor on the inside, which spins a mini-banana on the outside. This would then be read by a photointerruptor in terms of rotations per minute. Then this value would be displayed on the front of our box using a Liquid Crystal Display. The entire box would be powered by a 9-Volt battery back, with an on switch and a corresponding LED to signify if our box was switched on or not.
 
+---
+
 ## Proposed_Project_Schedule  
 
 Attached below is a table of our week-to-week goals, and what we would like to get done in that time.
@@ -39,6 +41,8 @@ The most likely outcome is that we will probably need more time for some things,
 | **Week of 5/22-26**  | PID Tuning/Testing   |
 | **Week of 5/29-6/2** | Extra Time           |
 
+---
+
 ## **Planning**
 
 | Planning_for_CAD | Planning_for_Code |
@@ -53,7 +57,7 @@ The most likely outcome is that we will probably need more time for some things,
 We knew that we needed to choose a simple project to make it so that we wouldn't have to cram in everything all at once near the end of our project. That was reflected in the way we approached our CAD design, as we opted for a simple T-Slot box with all the electronic elements on the inside. The only slightly-challenging element of our CAD Design process was making sure that there was enough space for everything, especially since we knew that we would need plenty of space for all of the wiring for the LCD, LED, Adafruit Metro, Switch, TT-Motor, and finally the Photointerruptor. In the end, reflecting on what we could have probably done better, it might have been smart to make the box a little bigger in order to allow for better ease if access while wiring.
 
 ### __The link to our Onshape document can be found here: [link](https://cvilleschools.onshape.com/documents/eb53edd93056d781bfd5d1be/w/7a942e8a39012302d831d4e7/e/d26a37774ba29daec19e587c?renderMode=0&uiState=6479f2072df10846c8d284a7)__
-
+---
 ## Materials
 - Adafruit Metro M4 Airift Lite Board
 - Breadboard
@@ -103,7 +107,7 @@ if inter.value and lastVal == False:
         lastVal  = False
 ```
 ##### These lines ensure that the photointerrupter doesn't read an interrupt as more than one interrupt. It acts as a debouncer.
-
+---
 ### Rewritting of RPM code
 
 ```python
@@ -127,6 +131,9 @@ if interrupts % 10 == 0:
         time2 = time.monotonic()  #  defining the RPM
         RPM = 60/((time2-time1)/10)
 ```
+---
+### PID Code
+
 ##### Although the code shown above was written well, it wasn't fit for our project. The math was incorrect, leading to the incorrect RPM.
 
 ```python
@@ -141,8 +148,8 @@ pid.output_limits = (10000, 50000)
 motor.duty_cycle = int(pid(RPM))
 ```
 ##### This chunk of code sets the motor cycle to the PID, as opposed to the potentiometer.
-
-## Evidence_for_Code_Prototype 
+---
+## Evidence_for_Code_Prototype
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/earlycodeevidence.gif?raw=true" width="400">
 
@@ -190,8 +197,9 @@ A portion of the PID Code was from Copper280z's Github Repository: _CircuitPytho
 
 The link for their repository can be found here: [**link**](https://github.com/Copper280z/CircuitPython_simple-pid)
 
-[very short code reflection]
+My partner and I spent the most time in calculating the RPM. We had a lot of help from Paul Weder in the beginning, then after better understanding the function of PID, and the importance of RPM, we began to tune the code to our preferations. After coding the RPM, a few lines of code were written to connect the motor power to the PID. Finally, we fine tuned our project to match its setpoint, and the code was done!
 
+---
 ## **Reflection** 
 
 This project was fun. Although sometimes we had setbacks, or problems that took us annoyingly long to solve, we figured them out. It also taught us even more about many things, especially time management and code. One thing that I'm happy to say is that I am really proud of how we used our time to work as hard as we could on one task, and then moved on to the next. I am also very proud because of how we spent so much extra time in the lab just trying to make any sort of progress. PID is challenging, and it is definitely a good thing that we realized such so early on. It helped us plan better, come up with more ideas, and eventually it taught us how to optimize all aspects of our project so that we're able to actually to work with PID. 
