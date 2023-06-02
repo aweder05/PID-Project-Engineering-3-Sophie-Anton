@@ -12,7 +12,7 @@
 * [CAD Images](#CAD_Images)
 * [Code Prototype and Evidence](#Code_Prototype_and_Evidence)
 * [Evidence for Code Prototype](#Evidence_for_Code_Prototype)
-* [Wiring](#Wiring)
+* [Wiring for Prototype](#Wiring_for_Prototype)
 
 <!-- <a name="CAD_Design_for_PID_Project"></a>  -->
 <!-- <a name="Project_Idea"></a> -->
@@ -137,7 +137,7 @@ if interrupts % 10 == 0:
 
 
 
-## __Wiring for Prototype__
+## __Wiring_for_Prototype__
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/updated-wiring5.30.23.png?raw=true" width="500"> 
 
