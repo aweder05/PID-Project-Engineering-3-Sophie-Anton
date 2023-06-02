@@ -19,6 +19,8 @@
     * [Wiring for Prototype](#Wiring_for_Prototype)
     * [Wiring Diagram V.2 | Final Wiring](#Wiring_Diagram_V.2_|_Final_Wiring)
     * [Final Code](#__Final_Code__)
+* [Final Working Project Evidence](#Final_Working_Project_Evidence)    
+* [Pictures](#Pictures)
 * [Reflection](#Reflection)
 
 <!-- <a name="CAD_Design_for_PID_Project"></a>  -->
@@ -207,12 +209,12 @@ The link for their repository can be found here: [**link**](https://github.com/C
 
 My partner and I spent the most time in calculating the RPM. We had a lot of help from Paul Weder in the beginning, then after better understanding the function of PID, and the importance of RPM, we began to tune the code to our preferations. After coding the RPM, a few lines of code were written to connect the motor power to the PID. Finally, we fine tuned our project to match its setpoint, and the code was done!
 
-## Pictures 
+## **Pictures** 
 
 | | | |
 |-- |-- | --|
-|<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5615.jpg?raw=true" height="200"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5616.jpg?raw=true" height="200"> | | 
-| | | | 
+|<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5615.jpg?raw=true" height="200"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5616.jpg?raw=true" height="200"> | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5617.jpg?raw=true" height="200">| 
+|This image shows how the LCD is on the front of the box, and is used to display RPM | This picture shows an isometric view of our box, and even a little sight of our metro board on the inside.  |Finally, thid picture shows our spinning element, powered by a TT Motor, with it's blades passing through a photointerrupter.  | 
 
 # **Final Working Project Evidence**
 
