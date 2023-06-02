@@ -199,13 +199,20 @@ motor.duty_cycle = int(pid(RPM))
 
 ## __Final Code__
 
-[insert code here]
+Heres a link to our code, for the sake of space. 
+[**Link**](https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/final.code.py)
 
 A portion of the PID Code was from Copper280z's Github Repository: _CircuitPython Simple PID_
 
 The link for their repository can be found here: [**link**](https://github.com/Copper280z/CircuitPython_simple-pid)
 
 My partner and I spent the most time in calculating the RPM. We had a lot of help from Paul Weder in the beginning, then after better understanding the function of PID, and the importance of RPM, we began to tune the code to our preferations. After coding the RPM, a few lines of code were written to connect the motor power to the PID. Finally, we fine tuned our project to match its setpoint, and the code was done!
+
+# **Final Working Project Evidence**
+
+<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/finaldevidence.gif?raw=true" height="400">
+
+As you can see, our PID setpoint is 180, as printed in the second row of the LCD. As our controller does its magic, you can see it getting closer and closer to 180. 
 
 ---
 ## **Reflection** 
