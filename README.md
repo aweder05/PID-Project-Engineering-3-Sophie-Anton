@@ -18,7 +18,7 @@
     * [Evidence for Code Prototype](#Evidence_for_Code_Prototype)
     * [Wiring for Prototype](#Wiring_for_Prototype)
     * [Wiring Diagram V.2 | Final Wiring](#Wiring_Diagram_V.2_|_Final_Wiring)
-    * [Final Code](#__Final_Code__)
+    * [Final Code](#Final_Code)
 <<<<<<< HEAD
 * [Final Working Project Evidence](#Final_Working_Project_Evidence)
 =======
