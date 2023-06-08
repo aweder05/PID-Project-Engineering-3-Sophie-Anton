@@ -219,17 +219,12 @@ My partner and I spent the most time in calculating the RPM. We had a lot of hel
 
 # **Final_Working_Project_Evidence**
 
-## Pictures 
-
 ## **Pictures** 
 
 | | | |
 |-- |-- | --|
 |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5615.jpg?raw=true" height="200"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5616.jpg?raw=true" height="200"> | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5617.jpg?raw=true" height="200">| 
-|This image shows how the LCD is on the front of the box, and is used to display RPM | This picture shows an isometric view of our box, and even a little sight of our metro board on the inside.  |Finally, thid picture shows our spinning element, powered by a TT Motor, with it's blades passing through a photointerrupter.  | 
-
-
-# **Final Working Project Evidence**
+|This image shows how the LCD is on the front of the box, and is used to display RPM | This picture shows an isometric view of our box, and even a little sight of our metro board on the inside.  |Finally, thid picture shows our spinning element, powered by a TT Motor, with it's blades passing through a photointerrupter.  |
 
 ## **Final_Working_Project_Evidence**
 
