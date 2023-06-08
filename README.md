@@ -5,26 +5,32 @@
 
 ## __Table of Contents__
 
-* [Project Porposal](#Project_Idea)
+* [Project Proposal](#Project_Proposal)
     * [Project Idea](#Project_Idea)
     * [Proposed Project Schedule](#Proposed_Project_Schedule)
 * [Planning](#Planning)
 * [Materials](Materials)
-* [CAD](#CAD_Design_for_PID_Project)
+* [CAD](#CAD)
     * [CAD Design for PID Project](#CAD_Design_for_PID_Project)
     * [CAD Images](#CAD_Images)
-* [Code/Wiring](#Code_Prototype_and_Evidence)
+* [Code and Wiring](#Code_and_Wiring)
     * [Code Prototype and Evidence](#Code_Prototype_and_Evidence)
     * [Evidence for Code Prototype](#Evidence_for_Code_Prototype)
     * [Wiring for Prototype](#Wiring_for_Prototype)
     * [Wiring Diagram V.2 | Final Wiring](#Wiring_Diagram_V.2_|_Final_Wiring)
     * [Final Code](#__Final_Code__)
+<<<<<<< HEAD
+* [Final Working Project Evidence](#Final_Working_Project_Evidence)
+=======
 * [Final Working Project Evidence](#Final_Working_Project_Evidence)    
 * [Pictures](#Pictures)
+>>>>>>> ba175d225c9e0bd466d33e97f34cad529c1e8316
 * [Reflection](#Reflection)
 
 <!-- <a name="CAD_Design_for_PID_Project"></a>  -->
 <!-- <a name="Project_Idea"></a> -->
+
+# **Project_Proposal**
 
 ## **Project_Idea**
 
@@ -61,12 +67,6 @@ The most likely outcome is that we will probably need more time for some things,
 
 ----
 
-## __CAD_Design_for_PID_Project__
-
-We knew that we needed to choose a simple project to make it so that we wouldn't have to cram in everything all at once near the end of our project. That was reflected in the way we approached our CAD design, as we opted for a simple T-Slot box with all the electronic elements on the inside. The only slightly-challenging element of our CAD Design process was making sure that there was enough space for everything, especially since we knew that we would need plenty of space for all of the wiring for the LCD, LED, Adafruit Metro, Switch, TT-Motor, and finally the Photointerruptor. In the end, reflecting on what we could have probably done better, it might have been smart to make the box a little bigger in order to allow for better ease if access while wiring.
-
-### __The link to our Onshape document can be found here: [link](https://cvilleschools.onshape.com/documents/eb53edd93056d781bfd5d1be/w/7a942e8a39012302d831d4e7/e/d26a37774ba29daec19e587c?renderMode=0&uiState=6479f2072df10846c8d284a7)__
----
 ## __Materials__
 - Adafruit Metro M4 Airift Lite Board
 - Breadboard
@@ -79,6 +79,15 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 - 9V Battery Pack
 
 ---- 
+# **CAD**
+
+## __CAD_Design_for_PID_Project__
+
+We knew that we needed to choose a simple project to make it so that we wouldn't have to cram in everything all at once near the end of our project. That was reflected in the way we approached our CAD design, as we opted for a simple T-Slot box with all the electronic elements on the inside. The only slightly-challenging element of our CAD Design process was making sure that there was enough space for everything, especially since we knew that we would need plenty of space for all of the wiring for the LCD, LED, Adafruit Metro, Switch, TT-Motor, and finally the Photointerruptor. In the end, reflecting on what we could have probably done better, it might have been smart to make the box a little bigger in order to allow for better ease if access while wiring.
+
+### __The link to our Onshape document can be found here: [link](https://cvilleschools.onshape.com/documents/eb53edd93056d781bfd5d1be/w/7a942e8a39012302d831d4e7/e/d26a37774ba29daec19e587c?renderMode=0&uiState=6479f2072df10846c8d284a7)__
+---
+
 
 ## **CAD_Images**
 
@@ -88,6 +97,8 @@ We knew that we needed to choose a simple project to make it so that we wouldn't
 |This is a 3/4 view of our project CAD. My partner and I were sure to take an image that shows the inside of the box. This angle displays where the LCD, motor, battery pack, LED, and switch are positioned. | This image encapsulates what the inside of the box looks like, minus the jumper wires. | 
 |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/c7c0869f-74ba-422c-8d60-07509ed2f411" width="300"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/assets/112981462/830d2f33-b15f-41eb-a28a-b038ec8a305c" width="300"> |
 |This image shows the outside of the box. This angle exemplifies what the box would look like fabricated. The LED and switch are placed around the LCD, with the battery pack on top of the box, and the photointerrupter and motor piece on the side. | This is the piece that attaches to the motor.
+
+# **Code_and_Wiring**
 
 ## **Code_Prototype_and_Evidence**
 ----
@@ -209,14 +220,26 @@ The link for their repository can be found here: [**link**](https://github.com/C
 
 My partner and I spent the most time in calculating the RPM. We had a lot of help from Paul Weder in the beginning, then after better understanding the function of PID, and the importance of RPM, we began to tune the code to our preferations. After coding the RPM, a few lines of code were written to connect the motor power to the PID. Finally, we fine tuned our project to match its setpoint, and the code was done!
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+# **Final_Working_Project_Evidence**
+=======
+## Pictures 
+=======
 ## **Pictures** 
+>>>>>>> ba175d225c9e0bd466d33e97f34cad529c1e8316
 
 | | | |
 |-- |-- | --|
 |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5615.jpg?raw=true" height="200"> |<img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5616.jpg?raw=true" height="200"> | <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/IMG_5617.jpg?raw=true" height="200">| 
 |This image shows how the LCD is on the front of the box, and is used to display RPM | This picture shows an isometric view of our box, and even a little sight of our metro board on the inside.  |Finally, thid picture shows our spinning element, powered by a TT Motor, with it's blades passing through a photointerrupter.  | 
 
+<<<<<<< HEAD
+# **Final Working Project Evidence**
+>>>>>>> 9942a50575e3b43b6027c27e557521f0df970b07
+=======
 ## **Final_Working_Project_Evidence**
+>>>>>>> ba175d225c9e0bd466d33e97f34cad529c1e8316
 
 <img src="https://github.com/aweder05/PID-Project-Engineering-3-Sophie-Anton/blob/main/media.md/finaldevidence.gif?raw=true" height="400">
 
