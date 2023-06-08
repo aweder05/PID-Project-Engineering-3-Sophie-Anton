@@ -65,7 +65,7 @@ The most likely outcome is that we will probably need more time for some things,
 |Have an on and off switch for the Motor | Some wiring may not be securely mounted to everything or the rest of the box  |
 |Ensure everything is powered by 4 or 6 AA Batteries |LCD might cause issues again. We can solve these issues with an on and off switch for the LCD as well | 
 
-### ****Success_Statement:** 
+### **Success_Statement:** 
 
 Our project will be considered a success  once we have successfully constructed a box with a spinning, two-spokes banana passing through a photointerruptor, with the RPM of that spinning banana being displayed on an LCD on the front of the box. All of this will be powered by a 6 AA Battery pack, and the motor will be a TT DC Gearbox Motor. 
 
